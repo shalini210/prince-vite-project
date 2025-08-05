@@ -8,6 +8,7 @@ export default function Navbar() {
         <Link to="/service">Services</Link>
         <Link to="/about">About</Link>
         <Link to="/AllProducts">All Products</Link>
+        <Link to = "/categories">Categories</Link>
     </div>
   )
 }
