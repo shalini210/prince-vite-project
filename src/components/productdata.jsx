@@ -1,5 +1,6 @@
 export const Productdata=[
   {
+    "id":1,
     "name": "Wireless Headphones",
     "category": "Electronics",
     "price": 2999,
@@ -13,6 +14,7 @@ export const Productdata=[
     ]
   },
   {
+    "id":2,
     "name": "Running Shoes",
     "category": "Footwear",
     "price": 3999,
@@ -26,6 +28,7 @@ export const Productdata=[
     ]
   },
   {
+    "id":3,
     "name": "Smartphone X20",
     "category": "Mobiles",
     "price": 49999,
@@ -39,6 +42,7 @@ export const Productdata=[
     ]
   },
   {
+    "id":4,
     "name": "Casual T-Shirt",
     "category": "Apparel",
     "price": 999,
@@ -51,6 +55,7 @@ export const Productdata=[
     ]
   },
   {
+    "id":5,
     "name": "Bluetooth Speaker",
     "category": "Electronics",
     "price": 2499,

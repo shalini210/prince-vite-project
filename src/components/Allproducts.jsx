@@ -9,7 +9,7 @@ export default function Allproducts() {
             <p>{product.name}</p>
             <p><del className='text-red-500'>Rs:{product.price}</del>
             <span className='text-blue-600 font-bold'> Rs:{product.discounted_price}</span></p>
-            <Link to="/" className='text-blue-500 underline'>View Details</Link>
+            <Link to={"/ProductDetails/"+product.id} className='text-blue-500 underline'>View Details</Link>
         </div>
     })
   return (

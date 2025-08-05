@@ -10,6 +10,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Allproducts from './components/Allproducts'
+import ProductDetails from './components/ProductDetails'
 function App() {
 
  let companyname = "Tata Consultancy Services"
@@ -20,6 +21,7 @@ function App() {
     <Navbar></Navbar>
       <Routes>
         {/* //here corresponding component will load based on route matching */}
+        <Route path='/ProductDetails/:id' element={<ProductDetails></ProductDetails>}></Route>
         <Route path='/stateeg' element={<Stateeg></Stateeg>}></Route>
         <Route path='/service' element={<Service></Service>}></Route>
         <Route path='/about' element={<About></About>}></Route>
