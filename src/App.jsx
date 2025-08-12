@@ -28,6 +28,8 @@ function App() {
         <Route path='/service' element={<Service></Service>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/AllProducts' element={<Allproducts></Allproducts>}></Route>
+        <Route path='/AllProducts/:categoryname' element={<Allproducts></Allproducts>}></Route>
+
       </Routes>
     </>
   )

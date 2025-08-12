@@ -1,1 +1,108 @@
-<div class="visme_d" data-title="Sample Custom Form" data-url="7vg31yq7-sample-custom-form?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="139532"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Wave animation */
+    .wave-hand {
+      animation: wave 2s ease-in-out 2;
+      transform-origin: bottom center;
+      display: inline-block;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      20% { transform: rotate(-20deg); }
+      40% { transform: rotate(10deg); }
+      60% { transform: rotate(-10deg); }
+      80% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+    .fade-in.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center px-4">
+
+  <!-- Flex container -->
+  <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl w-full">
+
+    <!-- Cartoon character side -->
+    <div id="cartoon" class="text-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
+           alt="cartoon"
+           class="w-48 h-48 mx-auto wave-hand" />
+      <p class="mt-2 text-white font-medium text-xl">Hi there! 👋</p>
+    </div>
+
+    <!-- Login Form (Initially hidden) -->
+    <div id="loginForm" class="fade-in hidden bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md transition-all duration-500">
+      <h2 class="text-3xl font-semibold text-center text-indigo-700 mb-6">Login</h2>
+
+      <form class="space-y-6">
+        <!-- Email -->
+        <div class="relative">
+          <input type="email" required placeholder=" " class="peer w-full px-4 pt-6 pb-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600"/>
+          <label class="absolute left-4 top-2 text-sm text-gray-500 transition-all
+              peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
+              peer-focus:top-2 peer-focus:text-sm peer-focus:text-indigo-600">
+            Email address
+          </label>
+        </div>
+
+        <!-- Password -->
+        <div class="relative">
+          <input type="password" id="password" required placeholder=" " class="peer w-full px-4 pt-6 pb-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600"/>
+          <label class="absolute left-4 top-2 text-sm text-gray-500 transition-all
+              peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
+              peer-focus:top-2 peer-focus:text-sm peer-focus:text-indigo-600">
+            Password
+          </label>
+          <button type="button" onclick="togglePassword()" class="absolute right-4 top-4 text-sm text-indigo-600 hover:underline">Show</button>
+        </div>
+
+        <!-- Button -->
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 rounded-lg transition-all duration-300 shadow-md">
+          Login
+        </button>
+
+        <p class="text-center text-sm text-gray-500">
+          Don’t have an account?
+          <a href="#" class="text-indigo-600 hover:underline">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Show form after 2s
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loginForm').classList.remove('hidden');
+        document.getElementById('loginForm').classList.add('show');
+      }, 2000);
+    });
+
+    function togglePassword() {
+      const pwd = document.getElementById('password');
+      const btn = event.target;
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+        btn.textContent = 'Hide';
+      } else {
+        pwd.type = 'password';
+        btn.textContent = 'Show';
+      }
+    }
+  </script>
+</body>
+</html>
